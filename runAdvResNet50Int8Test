@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+NET_BASE=/home/cqiu/deepLearningData/ResNetData/AdvResnet50
+#/home/cqiu/eclipse_workspace/caffe-master-ristretto/build/tools/caffe test \
+./build/tools/caffe test \
+    --model=$NET_BASE/AdvResNet50Int8.prototxt \
+	--weights=$NET_BASE/AdvResnet50.caffemodel \
+	--iterations=1
+

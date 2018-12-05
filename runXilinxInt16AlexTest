@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+PRO_BASE=/home/cqiu/deepLearningData/AlexNetInt8Data/AlexNetXilinx
+MODEL_BASE=/home/cqiu/deepLearningData/AlexNetInt8Data/AlexNetXilinx
+#/home/cqiu/eclipse_workspace/caffe-master-ristretto/build/tools/caffe test \
+./build/tools/caffe test \
+    --model=$MODEL_BASE/alexNetInt16Test.prototxt \
+	--weights=$MODEL_BASE/AlexNet.caffemodel \
+	--iterations=1
+

@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+#NET_BASE=/home/cqiu/deepLearningData/AlexNetInt8Data/RistrettoDemo
+NET_BASE=/home/cqiu/deepLearningData/DeephiSqueezeNet
+NET_BASE_TMP=/home/cqiu/AIPrj/decompressDeephiPrj/squeezeNetDeephiMaster
+
+#/home/cqiu/eclipse_workspace/caffe-master-ristretto/build/tools/caffe test \
+./build/tools/caffe test \
+	--model=$NET_BASE/SqueezeNet_trainval.prototxt \
+	--weights=$NET_BASE_TMP/decompressed_SqueezeNet.caffemodel \
+	--iterations=1

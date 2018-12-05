@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+NET_BASE=/home/cqiu/deepLearningData/ResNetData/ResNet50Data
+QUAN_PATH=/home/cqiu/AIPrj/quantizationPrj/resNet50QuanPrj
+#	--weights=$NET_BASE/ResNet-50-model.caffemodel \
+#/home/cqiu/eclipse_workspace/caffe-master-ristretto/build/tools/caffe test \
+./build/tools/caffe test \
+    --model=$NET_BASE/ResNet50Test.prototxt \
+    --weights=$QUAN_PATH/quantization_resnet50.caffemodel-int9 \
+	--iterations=5
+

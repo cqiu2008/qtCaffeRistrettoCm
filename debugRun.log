@@ -1,0 +1,6 @@
+---------- Prediction for /home/cqiu/eclipse_workspace/caffe-master/examples/images/bird.jpg ----------
+1.0000 - "n01818515 macaw"
+0.0000 - "n01820546 lorikeet"
+0.0000 - "n01819313 sulphur-crested cockatoo, Kakatoe galerita, Cacatua galerita"
+0.0000 - "n01843383 toucan"
+0.0000 - "n01817953 African grey, African gray, Psittacus erithacus"

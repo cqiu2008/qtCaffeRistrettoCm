@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+NET_BASE=/home/cqiu/deepLearningData/SqueezeNetInt8Data/RistrettoDemo
+#/home/cqiu/eclipse_workspace/caffe-master-ristretto/build/tools/caffe test \
+./build/tools/caffe test \
+	--model=$NET_BASE/quantized.prototxt \
+	--weights=$NET_BASE/squeezenet_finetuned.caffemodel \
+	--iterations=1

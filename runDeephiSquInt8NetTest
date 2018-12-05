@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+NET_BASE=/home/cqiu/deepLearningData/DeephiSqueezeNet
+#/home/cqiu/eclipse_workspace/caffe-master-ristretto/build/tools/caffe test \
+./build/tools/caffe test \
+    --model=$NET_BASE/deephi_squ_int8_test.prototxt \
+	--weights=$NET_BASE/decompressed_SqueezeNet.caffemodel \
+	--iterations=1
+

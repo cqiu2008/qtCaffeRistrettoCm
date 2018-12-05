@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+#/home/cqiu/eclipse_workspace/caffe-master-ristretto/build/tools/caffe test \
+./build/tools/caffe test \
+	--model=/home/cqiu/deepLearningData/Vgg16NetInt8Data/caffeTestOneImage/orgDeploy.prototxt \
+	--weights=/home/cqiu/deepLearningData/Vgg16NetInt8Data/caffeTestOneImage/VGG16.caffemodel \
+	--iterations=1
+
+
+#--model=/home/cqiu/deepLearningData/Vgg16NetInt8Data/caffeTestOneImage/deployInt8.prototxt \

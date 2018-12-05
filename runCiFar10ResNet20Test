@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+NET_BASE=/home/cqiu/deepLearningData/ResNetData/ciFar10ResNet/ResNet-on-Cifar10-master/without_data_augmentation/ResNet/20
+#/home/cqiu/eclipse_workspace/caffe-master-ristretto/build/tools/caffe test \
+./build/tools/caffe test \
+    --model=$NET_BASE/ciFar10ResNet20Test.prototxt \
+	--weights=$NET_BASE/ResNet_20.caffemodel \
+	--iterations=1
+

@@ -1,0 +1,20 @@
+#!/usr/bin/perl -w
+
+print "Begin to generate the Script.tcl file\n";
+print "input keyword \n"; 
+
+my $imagePath ;
+my $basePath ;
+
+$_=$ARGV[0];
+##s/\W+\s*$//g; ## delete the "/" when the character including the "/" or "." and so on.
+$imagePath = $_;
+$basePath ='/home/cqiu/deepLearningData/ILSVRC2012/imageNet/ILSVRC2012_img_test';
+#$basePath ='/home/cqiu/Share/imgTmp';
+$baseModelPath='/home/cqiu/deepLearningData/AlexNetInt8Data/AlexNetXilinx';
+system("./build/examples/cpp_classification/classification.bin $baseModelPath/deploy.prototxt  $baseModelPath/AlexNet.caffemodel $baseModelPath/imagenet_mean.binaryproto  $baseModelPath/image_net_synset_words.txt $imagePath");
+
+
+
+
+#/home/cqiu/eclipse_workspace/caffe-master/examples/images/bird.jpg

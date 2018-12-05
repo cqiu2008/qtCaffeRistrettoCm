@@ -1,0 +1,12 @@
+build/src/caffe/proto
+include/caffe/3rdparty
+include/caffe/util
+pytorch/info/test/test/ffi/src
+pytorch/info/test/test/ffi/src/cpu
+pytorch/info/test/test/ffi/src/cuda
+pytorch/lib/python2.7/site-packages/torch/lib
+pytorch/lib/python2.7/site-packages/torch/lib/include/ATen
+pytorch/lib/python2.7/site-packages/torch/lib/include/TH
+pytorch/lib/python2.7/site-packages/torch/lib/include/TH/generic
+src/gtest
+src/caffe/ristretto/layers

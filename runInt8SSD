@@ -1,0 +1,5 @@
+./build/tools/ssd_detect \
+        /home/cqiu/deepLearningData/SSDNetInt8Data/deploySSDInt8.prototxt \
+        /home/cqiu/deepLearningData/SSDNetInt8Data/SSD.caffemodel \
+        /home/cqiu/deepLearningData/wyd_ssd/pictures.txt
+

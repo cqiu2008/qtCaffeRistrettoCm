@@ -1,0 +1,10 @@
+#### Float ,real 
+test --model=/home/cqiu/deepLearningData/ResNetData/ciFar10ResNet/ResNet-on-Cifar10-master/without_data_augmentation/ResNet/20/ciFar10ResNet20Test.prototxt --weights=/home/cqiu/deepLearningData/ResNetData/ciFar10ResNet/ResNet-on-Cifar10-master/without_data_augmentation/ResNet/20/ResNet_20.caffemodel --iterations=1
+
+
+#### Int8  
+test --model=/home/cqiu/deepLearningData/ResNetData/ciFar10ResNet/ResNet-on-Cifar10-master/without_data_augmentation/ResNet/20/ciFar10ResNet20TestInt8.prototxt --weights=/home/cqiu/deepLearningData/ResNetData/ciFar10ResNet/ResNet-on-Cifar10-master/without_data_augmentation/ResNet/20/twnCiFarResNet20.caffemodel --iterations=1
+
+
+
+

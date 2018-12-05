@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+TMP_NET_BASE=/home/cqiu/deepLearningData/AlexNetInt8Data/RistrettoDemo
+NET_BASE=/home/cqiu/deepLearningData/DeephiAlexNet
+#/home/cqiu/eclipse_workspace/caffe-master-ristretto/build/tools/caffe test \
+./build/tools/caffe test \
+    --model=$NET_BASE/deephi_alexnet_test.prototxt \
+	--weights=$NET_BASE/decompressedAlexNet.caffemodel \
+	--iterations=1
+
