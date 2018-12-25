@@ -87,7 +87,10 @@ void NormalizeLayer<Dtype>::Forward_cpu(const int log_num_,const vector<Blob<Dty
   const Dtype* bottom_data = bottom[0]->cpu_data();
 
   ////Just test begin
-  FILE *oFile=fopen("test1.dat", "w+");
+  FILE *oFile;
+  char oFileName[256]={0};
+  sprintf(oFileName,"cnnData/normalizeInput%d.bin",log_num_);
+  oFile=fopen(oFileName, "w+");
   const Dtype* tst_data = bottom[0]->cpu_data();
   Dtype tst_data_tmp;
   for(int i=0;i<bottom[0]->count()/bottom[0]->num();i++){
@@ -142,6 +145,18 @@ void NormalizeLayer<Dtype>::Forward_cpu(const int log_num_,const vector<Blob<Dty
                             buffer_data);
       caffe_mul<Dtype>(dim, top_data, buffer_data, top_data);
     }
+  ////Just test begin
+  sprintf(oFileName,"cnnData/normalizeOutput%d.bin",log_num_);
+  oFile=fopen(oFileName, "w+");
+  Dtype* tst_data_out = top_data;
+  for(int i=0;i<top[0]->count()/top[0]->num();i++){
+      tst_data_tmp = *tst_data_out++;
+   if(  (0.00001f > tst_data_tmp) && (-0.00001f < tst_data_tmp)){ /// only print 0.00f,no -0.000f
+          tst_data_tmp= 0 ; }
+    fprintf(oFile,"%4f\n",float(tst_data_tmp));
+  }
+  fclose(oFile);
+  ////Just test end
     bottom_data += dim;
     top_data += dim;
   }

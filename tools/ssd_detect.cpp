@@ -280,9 +280,9 @@ std::vector<vector<float> > Detector::Detect(const cv::Mat& img) {
 
   Preprocess(img, &input_channels);
 
-  net_->Forward();
   system("rm -rf cnnData");
   system("cp -rf emptyCnn cnnData");
+  net_->Forward();
   logCaffeBlob(*net_);
 //  showParams();
 #if 0
